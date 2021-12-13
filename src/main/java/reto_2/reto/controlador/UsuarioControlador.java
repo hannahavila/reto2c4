@@ -61,6 +61,7 @@ public class UsuarioControlador {
      * @return regresa los nuevos valores del usuario
      */
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Usuario actualizar(@RequestBody Usuario usuario) {
         return servicio.actualizar(usuario);
     }

@@ -39,11 +39,13 @@ public class ChocolateControlador {
     }
 
     @PostMapping("/new")
+    @ResponseStatus(HttpStatus.CREATED)
     public Chocolate salvar(@RequestBody Chocolate chocolate) {
         return servicio.salvar(chocolate);
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Chocolate actualizar(@RequestBody Chocolate chocolate) {
         return servicio.actualizar(chocolate);
     }
